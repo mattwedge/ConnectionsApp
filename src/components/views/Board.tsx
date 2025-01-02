@@ -100,7 +100,8 @@ const BoardInner = ({ board }: { board: Board}) => {
 
   return <div>
     {
-      rows.map((row, i) => <div className="flex flex-row">{row.map(tile => <TileElement
+      rows.map((row, i) => <div className="flex flex-row" key={i}>{row.map(tile => <TileElement
+        key={tile.id}
         tile={tile}
         onPress={selectTile}
         selected={selectedTiles.includes(tile.id)}

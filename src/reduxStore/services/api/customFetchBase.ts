@@ -10,8 +10,6 @@ import { refreshTokenAsync, verifyTokenAsync } from "../../../utils/authRequests
 const mutex = new Mutex();
 
 const baseUrl = import.meta.env.VITE_V2_API_URL;
-console.log(baseUrl)
-console.log(import.meta.env)
 
 const baseQuery = fetchBaseQuery({
   baseUrl,
