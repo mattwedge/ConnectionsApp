@@ -1,0 +1,54 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base {
+  a {
+    @apply text-dpGreen;
+  }
+
+  body {
+    @apply text-dpTextBlack;
+  }
+}
+
+@layer base {
+  img {
+    @apply max-w-none;
+  }
+}
+
+@layer components {
+  button:disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+}
+
+/* custom list-style-type */
+.list-circle-custom {
+  list-style-type: none; 
+}
+
+.list-circle-custom li::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+  margin-bottom: 3px;
+}
+.list-circle-custom li:nth-child(2n)::before {
+  background-color: #f5a623;
+}
+.list-circle-custom li:nth-child(2n + 1)::before {
+  background-color: #0d944a;
+}
+
+body {
+    background-color: black;
+}
